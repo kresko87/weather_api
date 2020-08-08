@@ -2,6 +2,7 @@
 simple weather application allows you to select cities, for which you wish to track temperature. App than retrieves temperature data and forecasts for next 12 hours and saves them in database. You can than check weather history and differences between forecast and real temperatures. 
 
 ##Installation
+
 Download content in your web folder. 
 <br>Run commands inside project folder: 
 ```
@@ -24,6 +25,7 @@ You can run laravel task scheduler by adding these lines in your CRON file:
 ```
 
 ##Usage
+
 You can now open application in browser and register. After registration you will be redirected to weather panel.<br>
 You can add cities inside Slovenia. When you click them, you can check statistic data for specified dates. You can also check 
 if the forecast was the same as real temperature.  
