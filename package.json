@@ -22,5 +22,13 @@
         "sass-loader": "^8.0.0",
         "vue": "^2.5.17",
         "vue-template-compiler": "^2.6.10"
+    },
+    "dependencies": {
+        "bootstrap-vue": "^2.16.0",
+        "chart.js": "^2.9.3",
+        "flatpickr": "^4.6.3",
+        "js-datepicker": "^5.15.0",
+        "themify-icons": "^1.0.0",
+        "vue-chartjs": "^3.5.0"
     }
 }
