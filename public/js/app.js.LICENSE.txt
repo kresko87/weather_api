@@ -1,8 +1,25 @@
+/* flatpickr v4.6.3, @license MIT */
+
 /*!
   * Bootstrap v4.5.0 (https://getbootstrap.com/)
   * Copyright 2011-2020 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
+
+/*!
+ * BootstrapVue Icons, generated from Bootstrap Icons 1.0.0-alpha5
+ *
+ * @link https://icons.getbootstrap.com/
+ * @license MIT
+ * https://github.com/twbs/icons/blob/master/LICENSE.md
+ */
+
+/*!
+ * Chart.js v2.9.3
+ * https://www.chartjs.org
+ * (c) 2019 Chart.js Contributors
+ * Released under the MIT License
+ */
 
 /*!
  * Sizzle CSS Selector Engine v2.3.5
@@ -34,6 +51,32 @@
  *
  * Date: 2020-05-04T22:49Z
  */
+
+/*! 
+  * portal-vue © Thorsten Lünborg, 2019 
+  * 
+  * Version: 2.1.7
+  * 
+  * LICENCE: MIT 
+  * 
+  * https://github.com/linusborg/portal-vue
+  * 
+ */
+
+/*! *****************************************************************************
+    Copyright (c) Microsoft Corporation. All rights reserved.
+    Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+    this file except in compliance with the License. You may obtain a copy of the
+    License at http://www.apache.org/licenses/LICENSE-2.0
+
+    THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+    WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+    MERCHANTABLITY OR NON-INFRINGEMENT.
+
+    See the Apache Version 2.0 License for specific language governing permissions
+    and limitations under the License.
+    ***************************************************************************** */
 
 /**
  * @license
@@ -68,3 +111,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+
+//! moment.js
+
+//! moment.js language configuration
+
+//! moment.js locale configuration
