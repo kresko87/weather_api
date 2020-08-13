@@ -48,7 +48,7 @@ class OpenWeatherAPI implements WeatherProvider, PlacesProvider {
                 $prevTempObj = Temperature::where('datetime',$previousDateTime->format('Y-m-d H').':00:00')
                     ->where('id_place',$city->id)->first();
                 if($prevTempObj!=null){
-                    $prevTemp = $prevTempObj->temperature;
+                    $prevTemp = $prevTempObj->temperature_in_12h;
                 }
                 //</editor-fold>
 

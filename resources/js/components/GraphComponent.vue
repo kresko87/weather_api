@@ -158,7 +158,7 @@
                             let labels = [];
                             that.datasetChartBasic.data = [];
                             that.datasetChartForecast.data = [];
-                            for(var i=0;i<data.length;i++){
+                            for(let i=0;i<data.length;i++){
                                 data[i].datetime_hours = data[i].datetime.substring(0,16);
                                 labels.push(data[i].datetime_hours);
                                 that.datasetChartBasic.data.push(data[i].temperature);
