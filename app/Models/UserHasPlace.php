@@ -12,7 +12,7 @@ class UserHasPlace extends Model
     protected $guarded = [];
 
     public function place(){
-        return $this->belongsTo(Place::class, 'id');
+        return $this->belongsTo(Place::class, 'id_place', 'id');
     }
 
 }

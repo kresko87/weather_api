@@ -54,7 +54,7 @@ class PlacesBLL{
      * @return mixed
      */
     public function getAllPlacesFromUser(int $idUser){
-        return $uhp = UserHasPlace::where('id_user',$idUser)->with('place')->get();
+        return UserHasPlace::where('id_user',$idUser)->with('place')->get();
     }
 
 }

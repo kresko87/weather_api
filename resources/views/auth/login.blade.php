@@ -51,7 +51,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
+                        <div class="form-group row mb-3">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
@@ -65,6 +65,15 @@
                             </div>
                         </div>
                     </form>
+
+                    <div class="form-group row mb-0">
+                        <div class="col-md-8 offset-md-4">
+                            <a href="{{ route('loginWithProvider', ['google']) }}" >
+                                <img src="images/btn_google_signin_light_normal_web.png"/>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

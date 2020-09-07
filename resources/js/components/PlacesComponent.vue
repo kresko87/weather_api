@@ -9,10 +9,10 @@
             </div>
         </form>
         <div id="placesList">
-            <a  v-for="item in placesList"  v-on:click="placeItemClicked(item.id)" href="#" class="placeItem" :item_id="item.id" >
+            <div  v-for="item in placesList"  v-on:click="placeItemClicked(item.id_place, $event)" href="#" class="placeItem" :item_id="item.id_place" >
                 <div class="placeItemName">{{item.place.name}}</div>
-                <a href="#2" class="placeItemButtons">X</a>
-            </a>
+                <a href="#" class="placeItemButtons">X</a>
+            </div>
         </div>
     </div>
 </template>
@@ -54,10 +54,34 @@
                 });
             },
 
-            placeItemClicked(id){
-                $('.placeItem').removeClass('selected');
-                $('.placeItem[item_id="'+id+'"]').addClass('selected');
-                this.$emit('cityClicked', id);
+            placeItemClicked(id, event){
+                if(event.target.className=='placeItemButtons'){
+                    let r = confirm('You are about to remove city '+
+                        $('.placeItem[item_id="'+id+'"] > .placeItemName').html()+
+                        ' from your places list. Pres OK to delete or cancel to discard.');
+                    if(r===true){
+                        let that = this;
+                        $.ajax({
+                            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+                            url: 'removePlaceAndReturnAllCitiesFromUser',
+                            type: 'POST',
+                            dataType: 'json',
+                            data:{
+                                cityId:id
+                            },
+                            success: function (data) {
+                                console.log(data);
+                                that.placesList = data;
+                                $('.placeItem').removeClass('selected');
+                                that.$emit('cityClicked', 0);
+                            }
+                        });
+                    }
+                }else{
+                    $('.placeItem').removeClass('selected');
+                    $('.placeItem[item_id="'+id+'"]').addClass('selected');
+                    this.$emit('cityClicked', id);
+                }
             },
 
             addButtonClicked(callback){
@@ -69,6 +93,7 @@
                     dataType:'json',
 
                     success:function(data){
+                        $('#placesForm input[name="cityName"]').val('');
                         callback(data);
                     }
                 });
@@ -86,6 +111,7 @@
 }
 .placeItem:hover {
     background-color: #F7F7F7;
+    cursor:pointer;
 }
 .placeItem.selected {
     background-color: #EFEFEF;

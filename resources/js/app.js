@@ -38,4 +38,3 @@ Vue.component('chart-component', require('./components/ChartComponent').default)
 const app = new Vue({
     el: '#app',
 });
-

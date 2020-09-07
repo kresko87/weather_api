@@ -32,7 +32,7 @@ return [
     'google' => [
         'client_id' => env('OAUTH_GOOGLE_CLIENT_ID'),
         'client_secret' => env('OAUTH_GOOGLE_CLIENT_SECRET'),
-        'redirect' => 'OAUTH_GOOGLE_CALLBACK_URL',
+        'redirect' => env('OAUTH_GOOGLE_CALLBACK_URL'),
     ],
 
 ];

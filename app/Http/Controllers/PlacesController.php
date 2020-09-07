@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\UserHasPlace;
 use App\Services\CURLService;
 use App\Services\OpenWeatherAPI;
 use App\Services\PlacesBLL;
@@ -42,6 +43,13 @@ class PlacesController extends Controller
         $placesBLL = new PlacesBLL();
         $places = $placesBLL->getAllPlacesFromUser($userId);
         return $places;
+    }
+
+    public function removePlaceAndReturnAllCitiesFromUser(Request $request){
+        $userId = Auth::id();
+        $cityId = intval($request->cityId);
+        UserHasPlace::where('id_user',$userId)->where('id_place',$cityId)->delete();
+        return $this->getAllCitiesFromUser($userId);
     }
 
 
